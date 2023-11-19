@@ -1,0 +1,21 @@
+<p>directive works!</p>
+
+<button
+  (click)="blueButtonClass = !blueButtonClass"
+  [ngClass]="{ 'bg-blue': blueButtonClass }"
+  [ngStyle]="{ 'fontSize.px': fontSize }"
+>
+  Click to toggle the button class
+</button>
+
+<ng-template [ngIf]="blueButtonClass">
+  <p>Button is blue.</p>
+</ng-template>
+
+<p *ngIf="blueButtonClass">Button is blue. [by shorthand syntax]</p>
+
+<ul>
+  <li *ngFor="let item of items; let i = index">
+    Item Name: {{ item }}, Index: {{ i }}
+  </li>
+</ul>

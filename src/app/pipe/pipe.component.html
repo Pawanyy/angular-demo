@@ -1,0 +1,45 @@
+<p>Original Message: {{ messageString }}</p>
+<p>Message by TitleCase pipe: {{ messageString | titlecase }}</p>
+<p>Message by UpperCase pipe: {{ messageString | uppercase }}</p>
+<p>Message by LowerCase pipe: {{ messageString | lowercase }}</p>
+
+<br />
+
+<p>Current Raw Date: {{ currnetDate }}</p>
+<p>Current Date by Date Pipe: {{ currnetDate | date }}</p>
+<p>
+  Current Date by Date Pipe(dd/MM/yyyy): {{ currnetDate | date : "dd/MM/yyyy" }}
+</p>
+
+<br />
+
+<p>Currency Value: {{ currencyValue }}</p>
+<p>Currency Value by Currency Pipe: {{ currencyValue | currency }}</p>
+<p>
+  Currency Value by Currency Pipe(INR):
+  {{ currencyValue | currency : "INR" }}
+</p>
+
+<br />
+
+<p>Decimal Value: {{ decimalValue }}</p>
+<p>number Pipe(PREFIX_MIN.MIN-MAX)</p>
+<p>Decimal Value by number Pipe: {{ decimalValue | number }}</p>
+<p>
+  Decimal Value by number Pipe(1.1-2):
+  {{ decimalValue | number : "1.1-2" }}
+</p>
+<p>
+  Decimal Value by number Pipe(1.0-1):
+  {{ decimalValue | number : "1.0-1" }}
+</p>
+<p>
+  Decimal Value by number Pipe(5.0-0):
+  {{ decimalValue | number : "5.0-0" }}
+</p>
+
+<br />
+
+<p>JSON Pipe:</p>
+<pre>{{ pizza | json }}</pre>
+<p>Note: json pipe is only used for debugging.</p>
